@@ -11,15 +11,14 @@ app.controller('MainCtrl', function($scope) {
 	$scope.Integer = 3;
 })
 
-// var app = angular.module('myApp', []);
- 
-// app.controller('MainCtrl', function($scope) {
-//     $scope.someBoolean = true;
-//     $scope.someFunctionThatReturnsABoolean = function () {
-//         return true;
-//     };
-//     $scope.someFunctionThatReturnsSomething = function () {
-//         return 'Bonjour';
-//     };
-//     $scope.someInteger = 3;
-// });
+
+app.controller('RepeatCtrl', function($scope) {
+	$scope.friendlist = [
+		{'status': 'online', 'name': 'Lucas'},
+		{'status': 'offline', 'name': 'Florian'},
+		{'status': 'online', 'name': 'Babou'},
+		{'status': 'offline', 'name': 'Romain'},
+		{'status': 'offline', 'name': 'Malguy'},
+		{'status': 'online', 'name': 'Yas'}
+	];
+});

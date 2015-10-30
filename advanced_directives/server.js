@@ -11,8 +11,12 @@ app.use(express.static(__dirname + '/views'));
 app.use(morgan('dev'));
 
 // ROUTES ==============================
-app.get('/', function(req, res) {
-	res.render('index.ejs');
+app.get('/directive1', function(req, res) {
+	res.render('index_directive1.ejs');
+});
+
+app.get('/directive2', function(req, res) {
+	res.render('index_directive2.ejs');
 });
 
 app.listen(port, function() {

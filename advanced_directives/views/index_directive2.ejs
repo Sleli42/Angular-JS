@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Directive: ng-repeat !</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="wrapper" ng-controller="RepeatCtrl">
+		<h1>ng-repeat</h1>
+		<hr>
+		<h2>Une liste basique avec une navbar</h2>
+		<input type="text" ng-model="searchFriend" placeholder="Search ..." autofocus>
+		<ul>
+			<li class="friend" ng-repeat="friend in friendlist | filter:{name:searchFriend}">
+				{{ friend.name }}
+			</li>
+		</ul>
+		<hr>
+		<h2>Une liste classée par statut et par ordre alphabetique</h2>
+		<ul>
+			<li class="friend" ng-repeat="friend in friendlist | orderBy:['-status', 'name']">
+				{{ friend.name }}
+				<div class="status" ng-class="friend.status"></div>
+			</li>
+		</ul>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
