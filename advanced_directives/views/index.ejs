@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Advanced Directives: ng-show && ng-hide</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="wrapper" ng-controller="MainCtrl">
+	<h2>Elements visibles si ng-show == True</h2>
+	<div ng-show="Boolean">Boolean : {{Boolean}}</div>
+	<div ng-show="FctReturnBoolean()">FctReturnBoolean(): {{FctReturnBoolean()}}</div>
+	<div ng-show="FctReturnSomething()">FctReturnSomething(): {{FctReturnSomething()}}</div>
+	<div ng-show="Integer < 10">Integer &lt; 10: {{Integer < 10}}</div>
+
+	<h2>Elements visibles si ng-hide == FALSE</h2>
+	<div ng-hide="!Boolean">!Boolean: {{!Boolean}}</div>
+	<div ng-hide="!FctReturnBoolean()">!FctReturnBoolean(): {{!FctReturnBoolean()}}</div>
+	<div ng-hide="!FctReturnSomething()">!FctReturnSomething(): {{!FctReturnSomething()}}</div>
+	<div ng-hide="Integer > 10">Integer &gt; 10: {{Integer > 10}}</div>
+
+	<h2>Utilisation de ng-model</h2>
+	<label for="someCheckbox">Click me</label>
+	<input id="someCheckbox" type="checkbox" ng-model="checkboxValue">
+	<br><br>
+	<div ng-show="checkboxValue">La checkbox est cochée</div>
+	<div ng-hide="checkboxValue">La checkbox est decochée</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
