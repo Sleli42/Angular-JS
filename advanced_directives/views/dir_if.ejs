@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<title>Directive: ng-if</title>
+	<link rel="stylesheet" type="text/css" href="if.css">
+</head>
+<body>
+	<div ng-controller="IfCtrl">
+		<label><input type="checkbox" ng-model="showVideo">[PLAY VIDEO]</label>
+		<br><br>
+		<iframe ng-if="showVideo" width="480px" height="270px" src="https://www.youtube.com/embed/SWEYLpG70AI?autoplay=true" frameborder="0" allowfullscreen></iframe>
+		<div class="placeholder" ng-if="!showVideo">YOUTUBE</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>

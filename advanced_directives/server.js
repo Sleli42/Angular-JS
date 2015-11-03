@@ -11,19 +11,24 @@ app.use(express.static(__dirname + '/views'));
 app.use(morgan('dev'));
 
 // ROUTES ==============================
-app.get('/directive1', function(req, res) {
+app.get('/show&hide', function(req, res) {
 	// ng-show && ng-hide
-	res.render('index_directive1.ejs');
+	res.render('dir_show_hide.ejs');
 });
 
-app.get('/directive2', function(req, res) {
+app.get('/repeat', function(req, res) {
 	// ng-repeat
-	res.render('index_directive2.ejs');
+	res.render('dir_repeat.ejs');
 });
 
-app.get('/directive3', function(req, res) {
+app.get('/switch', function(req, res) {
 	// ng-switch
-	res.render('index_directive3.ejs');
+	res.render('dir_switch.ejs');
+})
+
+app.get('/if', function(req, res) {
+	// ng-if
+	res.render('dir_if.ejs');
 })
 
 app.listen(port, function() {

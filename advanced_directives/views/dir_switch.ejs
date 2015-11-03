@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="SwitchCtrl">
+<head>
+	<meta charset="utf-8">
+	<title>Directive: ng-switch</title>
+	<link rel="stylesheet" type="text/css" href="switch.css">
+</head>
+<body>
+	<div ng-controller="MainCtrl">
+ 
+    <!-- Choix du statut -->
+    <form >
+        <label><input type="radio" ng-model="user.status" value="admin"> Administrator</label>
+        <label><input type="radio" ng-model="user.status" value="contributor">Contributor</label>
+        <label><input type="radio" ng-model="user.status" value="visitor">Visitor</label>
+    </form>
+ 
+    <hr>
+ 
+    <!-- Afficher la section qui correspond au statut -->
+    <div id="wrapper" ng-switch="user.status">
+        <div ng-switch-when="admin">
+            <h2>Section admin</h2>
+        </div>
+        <div ng-switch-when="contributor">
+            <h2>Section contributeur</h2>
+        </div>
+        <div ng-switch-default>
+            <h2>Section visiteur</h2>
+        </div>
+    </div>
+</div>
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

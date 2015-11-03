@@ -1,3 +1,4 @@
+/*
 var	app = angular.module('myApp', []);
 
 app.controller('MainCtrl', function($scope) {
@@ -21,4 +22,19 @@ app.controller('RepeatCtrl', function($scope) {
 		{'status': 'offline', 'name': 'Malguy'},
 		{'status': 'online', 'name': 'Yas'}
 	];
+});
+*/
+/*
+var	app = angular.module('SwitchCtrl', []);
+
+app.controller('MainCtrl', function($scope) {
+	$scope.user = {
+		status: 'visitor'
+	};
+});
+*/
+var	app = angular.module('myApp', []);
+
+app.controller('IfCtrl', function($scope) {
+	//la variable "showVideo" est directement utilisée dans le view
 });
